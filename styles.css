@@ -1,0 +1,111 @@
+/* Created by Tivotal */
+
+/* Google Fonts(Poppins) */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4070f4;
+}
+
+.wrapper {
+  padding: 35px;
+  position: relative;
+  max-width: 1000px;
+  background-color: #fff;
+  border-radius: 13px;
+  overflow-x: hidden;
+}
+
+.wrapper .icon {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .icon:first-child {
+  left: 0;
+  background: linear-gradient(90deg, #fff 70%, transparent);
+  display: none;
+}
+
+.wrapper .icon:last-child {
+  right: 0;
+  background: linear-gradient(90deg, #fff 70%, transparent);
+  justify-content: flex-end;
+}
+
+.wrapper .icon i {
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  font-size: 1.12rem;
+  text-align: center;
+  line-height: 55px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.wrapper .icon:first-child i {
+  margin-left: 15px;
+}
+
+.wrapper .icon:last-child i {
+  margin-right: 15px;
+}
+
+.wrapper .icon i:hover {
+  background-color: #efedfb;
+}
+
+.wrapper .tab-box {
+  display: flex;
+  gap: 12px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.wrapper .tab-box.dragging {
+  scroll-behavior: auto;
+  cursor: grab;
+}
+
+.wrapper .tab-box .tab {
+  cursor: pointer;
+  font-size: 1.18rem;
+  white-space: nowrap;
+  background-color: #f5f4fd;
+  padding: 13px 20px;
+  border-radius: 30px;
+  border: 1px solid #d8d4f2;
+  transition: all 0.3s ease;
+}
+
+.wrapper .tab-box.dragging .tab {
+  user-select: none;
+  pointer-events: none;
+}
+
+.wrapper .tab-box .tab:hover {
+  background-color: #efedfb;
+}
+
+.wrapper .tab-box .tab.active {
+  background-color: #4070f4;
+  border-color: transparent;
+  color: #fff;
+}
